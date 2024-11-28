@@ -1,0 +1,12 @@
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function middleware(req: NextRequest)
+{
+    const {log} = console;
+
+    return NextResponse.next();
+}
+
+export const config = {
+    matcher: ['/admin', '/survey']
+}
